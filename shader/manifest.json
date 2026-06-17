@@ -1,0 +1,32 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§l§6RDAK §fShaders §8Low-end §7[1.21.20+]",
+    "description": "§lAn high graphics vanilla shader for Minecraft!\n§cOnly works with Minecraft Patch 1.21.20+\n§eMade By §f§lMODSFORMCPE.\n§fYou Can Get §a50-60 §fFPS Easily On Your 2GB Ram Device",
+    "uuid": "1eb76dea-0962-4b00-8e94-b11d8afce58c",
+    "version": [
+      1,
+      0,
+      1
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      20
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "217a9402-6107-49f5-831a-71156c6be6da",
+      "version": [
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "capabilities": [
+    "chemistry"
+  ]
+}
