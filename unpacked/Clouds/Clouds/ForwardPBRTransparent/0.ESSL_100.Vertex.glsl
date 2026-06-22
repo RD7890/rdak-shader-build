@@ -1,6 +1,7 @@
 attribute highp vec4 a_color0;
 attribute highp vec3 a_position;
 varying highp vec4 v_color0;
+varying highp vec3 cPos;
 uniform highp mat4 u_proj;
 uniform highp mat4 u_view;
 uniform mat4 u_model[4];
@@ -35,6 +36,6 @@ void main ()
     ) / DistanceControl.x) - 0.9), 0.0)
   ), 0.0, 1.0));
   v_color0 = tmpvar_1;
+  cPos = a_position;
   gl_Position = (offsetProj_4 * (u_view * tmpvar_7));
 }
-
