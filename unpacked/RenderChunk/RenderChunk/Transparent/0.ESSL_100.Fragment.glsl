@@ -49,7 +49,7 @@ void main ()
     (tmpvar_12 * (3.0 - (2.0 * tmpvar_12)))
   )), ((v_lightmapUV.x * tmpvar_7) * v_lightmapUV.y));
   lowp vec3 tmpvar_14;
-  tmpvar_14 = ((vec3(1.0, 0.35, 0.0) * tmpvar_13) + ((tmpvar_13 * tmpvar_13) * (
+  tmpvar_14 = ((vec3(1.0, 0.48, 0.06) * tmpvar_13) + ((tmpvar_13 * tmpvar_13) * (
     (tmpvar_13 * tmpvar_13)
    * tmpvar_13)));
   lowp vec3 almap_15;
@@ -77,7 +77,7 @@ void main ()
   tmpvar_23 = clamp (((v_lightmapUV.x - edge0_22) / (1.0 - edge0_22)), 0.0, 1.0);
   lowp float tmpvar_24;
   tmpvar_24 = mix (((
-    mix (1.0, 0.2, max (0.0, abs(tmpvar_5.x)))
+    mix (1.0, 0.40, max (0.0, abs(tmpvar_5.x)))
    * 
     (1.0 - (tmpvar_21 * (tmpvar_21 * (3.0 - 
       (2.0 * tmpvar_21)
@@ -89,7 +89,7 @@ void main ()
   tmpvar_25.x = 0.0;
   tmpvar_25.y = v_lightmapUV.y;
   lowp vec3 tmpvar_26;
-  tmpvar_26 = (texture2D (s_LightMapTexture, tmpvar_25).xyz * 0.2);
+  tmpvar_26 = (texture2D (s_LightMapTexture, tmpvar_25).xyz * 0.22);
   almap_15 = tmpvar_26;
   lowp vec4 tmpvar_27;
   tmpvar_27 = texture2DLod    (s_MatTexture, v_texcoord0, 0.0);
@@ -102,8 +102,8 @@ void main ()
   almap_15 = (tmpvar_26 + (float(tmpvar_28) * 3.0));
   almap_15 = (almap_15 + tmpvar_14);
   almap_15 = (almap_15 + (mix (
-    mix (vec3(1.1, 1.1, 0.8), vec3(1.0, 0.5, 0.0), tmpvar_18)
-  , vec3(0.05, 0.15, 0.4), tmpvar_20) * tmpvar_24));
+    mix (vec3(0.92, 0.94, 1.0), vec3(1.0, 0.72, 0.42), tmpvar_18)
+  , vec3(0.06, 0.12, 0.28), tmpvar_20) * tmpvar_24));
   diffuse_2.xyz = (diffuse_2.xyz * almap_15);
   if (waterd_1) {
     highp vec2 cpos_29;
@@ -287,9 +287,9 @@ void main ()
     highp vec3 tmpvar_80;
     highp vec3 tmpvar_81;
     tmpvar_81 = (FogColor.xyz * 2.0);
-    tmpvar_80 = mix (mix (mix (vec3(0.0, 0.4, 0.9), vec3(0.065, 0.15, 0.25), tmpvar_9), vec3(0.5, 0.4, 0.6), tmpvar_10), tmpvar_81, tmpvar_7);
+    tmpvar_80 = mix (mix (mix (vec3(0.08, 0.42, 0.88), vec3(0.04, 0.09, 0.20), tmpvar_9), vec3(0.52, 0.36, 0.50), tmpvar_10), tmpvar_81, tmpvar_7);
     highp vec3 tmpvar_82;
-    tmpvar_82 = mix (mix (mix (vec3(0.75, 0.98, 1.15), vec3(1.0, 0.4, 0.5), tmpvar_10), (tmpvar_80 + 0.15), tmpvar_9), tmpvar_81, tmpvar_7);
+    tmpvar_82 = mix (mix (mix (vec3(0.80, 0.96, 1.12), vec3(1.0, 0.44, 0.26), tmpvar_10), (tmpvar_80 + 0.15), tmpvar_9), tmpvar_81, tmpvar_7);
     skyc_79 = mix (mix ((tmpvar_80 * 0.07739938), pow (
       ((0.947867 * tmpvar_80) + 0.0521327)
     , vec3(2.4, 2.4, 2.4)), vec3(
@@ -489,7 +489,7 @@ void main ()
       fract((sin((tmpvar_118 + 58.0)) * 43758.55))
     , fp_115.x), fp_115.y));
     if (!(waterd_1)) {
-      diffuse_2.xyz = ((vec3(0.3, 0.6, 1.0) * diffuse_2.xyz) + ((diffuse_2.xyz * 
+      diffuse_2.xyz = ((vec3(0.28, 0.58, 0.95) * diffuse_2.xyz) + ((diffuse_2.xyz * 
         max (0.0, tmpvar_119)
       ) * v_lightmapUV.y));
     };
@@ -503,9 +503,9 @@ void main ()
   highp vec3 tmpvar_122;
   highp vec3 tmpvar_123;
   tmpvar_123 = (FogColor.xyz * 2.0);
-  tmpvar_122 = mix (mix (mix (vec3(0.0, 0.4, 0.9), vec3(0.065, 0.15, 0.25), tmpvar_9), vec3(0.5, 0.4, 0.6), tmpvar_10), tmpvar_123, tmpvar_7);
+  tmpvar_122 = mix (mix (mix (vec3(0.08, 0.42, 0.88), vec3(0.04, 0.09, 0.20), tmpvar_9), vec3(0.52, 0.36, 0.50), tmpvar_10), tmpvar_123, tmpvar_7);
   highp vec3 tmpvar_124;
-  tmpvar_124 = mix (mix (mix (vec3(0.75, 0.98, 1.15), vec3(1.0, 0.4, 0.5), tmpvar_10), (tmpvar_122 + 0.15), tmpvar_9), tmpvar_123, tmpvar_7);
+  tmpvar_124 = mix (mix (mix (vec3(0.80, 0.96, 1.12), vec3(1.0, 0.44, 0.26), tmpvar_10), (tmpvar_122 + 0.15), tmpvar_9), tmpvar_123, tmpvar_7);
   skyc_121 = mix (mix ((tmpvar_122 * 0.07739938), pow (
     ((0.947867 * tmpvar_122) + 0.0521327)
   , vec3(2.4, 2.4, 2.4)), vec3(
@@ -528,7 +528,7 @@ void main ()
   };
   diffuse_2.xyz = mix (diffuse_2.xyz, skyc_121, v_fog.w);
   lowp vec3 color_125;
-  color_125 = (diffuse_2.xyz * 5.0);
+  color_125 = (diffuse_2.xyz * 5.5);
   diffuse_2.xyz = pow (((
     (((color_125 * (
       (0.25 * color_125)
@@ -537,7 +537,7 @@ void main ()
      + 0.29)) + 0.07))
    - 0.08571429) * vec3(1.199794, 1.199794, 1.199794)), vec3(0.4545454, 0.4545454, 0.4545454));
   diffuse_2.xyz = clamp (diffuse_2.xyz, 0.0, 1.0);
-  diffuse_2.xyz = mix (vec3(dot (diffuse_2.xyz, vec3(0.2125, 0.7154, 0.0721))), diffuse_2.xyz, 1.1);
+  diffuse_2.xyz = mix (vec3(dot (diffuse_2.xyz, vec3(0.2125, 0.7154, 0.0721))), diffuse_2.xyz, 1.15);
   gl_FragColor = diffuse_2;
 }
 
